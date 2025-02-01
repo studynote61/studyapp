@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABAPD_C2309</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>ABAPD_C2309</h1>
+        <div id="timer">Time Taken: <span id="time">00:00</span></div>
+        <button id="logout">Logout</button>
+    </header>
+    <main>
+        <div id="quiz-container"></div>
+        <button id="submit">Submit</button>
+        <button id="next" style="display: none;">Next</button>
+        <div id="feedback"></div>
+        <div id="result"></div>
+    </main>
+    <script>
+        if (!localStorage.getItem('loggedIn')) {
+            window.location.href = 'login.html';
+        }
+
+        document.getElementById('logout').addEventListener('click', () => {
+            localStorage.removeItem('loggedIn');
+            window.location.href = 'login.html';
+        });
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let questions;
+        let timerInterval;
+        let startTime;
+
+        function startTimer() {
+            startTime = Date.now();
+            timerInterval = setInterval(function () {
+                const elapsedTime = Date.now() - startTime;
+                const minutes = Math.floor(elapsedTime / 60000);
+                const seconds = Math.floor((elapsedTime % 60000) / 1000);
+
+                document.getElementById('time').textContent = 
+                    (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+            }, 1000);
+        }
+
+        function loadQuestion(index) {
+            const quizContainer = document.getElementById('quiz-container');
+            quizContainer.innerHTML = '';
+
+            const question = questions[index];
+            const questionElement = document.createElement('div');
+            questionElement.className = 'question';
+
+            const questionText = document.createElement('pre');
+            questionText.textContent = question.QuestionText;
+            questionElement.appendChild(questionText);
+
+            ['A', 'B', 'C', 'D'].forEach(option => {
+                if (question[option]) {
+                    const label = document.createElement('label');
+                    const input = document.createElement('input');
+                    input.type = question["CorrectOption(s)"] instanceof Array ? 'checkbox' : 'radio';
+                    input.name = `question${index}`;
+                    input.value = option;
+                    label.appendChild(input);
+                    label.appendChild(document.createTextNode(question[option]));
+                    questionElement.appendChild(label);
+                }
+            });
+
+            quizContainer.appendChild(questionElement);
+            document.getElementById('feedback').innerHTML = '';
+            document.getElementById('submit').style.display = 'inline';
+            document.getElementById('next').style.display = 'none';
+        }
+
+        function showFeedback(correct, correctOption) {
+            const feedback = document.getElementById('feedback');
+            if (correct) {
+                feedback.textContent = 'Correct!';
+                feedback.style.color = 'green';
+            } else {
+                feedback.textContent = `Incorrect. The correct answer is ${Array.isArray(correctOption) ? correctOption.join(', ') : correctOption}`;
+                feedback.style.color = 'red';
+            }
+        }
+
+        function calculateScore() {
+            clearInterval(timerInterval);
+            const result = document.getElementById('result');
+            result.textContent = `You got ${score} out of ${questions.length} questions right! Time taken: ${document.getElementById('time').textContent}`;
+        }
+
+        fetch('/api/questions')
+            .then(response => response.json())
+            .then(data => {
+                questions = data;
+                loadQuestion(currentQuestionIndex);
+                startTimer();
+
+                document.getElementById('submit').addEventListener('click', () => {
+                    const selectedOptions = document.querySelectorAll(`input[name="question${currentQuestionIndex}"]:checked`);
+                    const userAnswers = Array.from(selectedOptions).map(option => option.value);
+                    const correctOption = questions[currentQuestionIndex]["CorrectOption(s)"];
+                    const isCorrect = Array.isArray(correctOption) ? userAnswers.length === correctOption.length && userAnswers.every(val => correctOption.includes(val)) : correctOption === userAnswers[0];
+
+                    if (isCorrect) {
+                        score++;
+                    }
+                    showFeedback(isCorrect, correctOption);
+
+                    document.getElementById('submit').style.display = 'none';
+                    document.getElementById('next').style.display = 'inline';
+                });
+
+                document.getElementById('next').addEventListener('click', () => {
+                    currentQuestionIndex++;
+                    if (currentQuestionIndex < questions.length) {
+                        loadQuestion(currentQuestionIndex);
+                    } else {
+                        calculateScore();
+                    }
+                });
+            });
+    </script>
+</body>
+</html>

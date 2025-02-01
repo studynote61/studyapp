@@ -1,0 +1,47 @@
+[
+  {
+    "QuestionID": 1,
+    "QuestionText": "What is the capital of India?",
+    "A": "Mumbai",
+    "B": "Delhi",
+    "C": "Kolkata",
+    "D": "Chennai",
+    "CorrectOption(s)": "B"  
+  },
+  {
+    "QuestionID": 2,
+    "QuestionText": "Which are prime numbers?",
+    "A": "2",
+    "B": "4",
+    "C": "5",
+    "D": "6",
+    "CorrectOption(s)": ["A", "C"]
+  },
+  {
+    "QuestionID": 3,
+    "QuestionText": "HTML stands for?",
+    "A": "Hyper Text Markup Language",
+    "B": "High Tech Machine Language",
+    "C": "Hyperlink Text Management Language",
+    "D": "Hyper Transfer Markup Language",
+    "CorrectOption(s)": "A"  
+  },
+  {
+    "QuestionID": 4,
+    "QuestionText": "In the following ABAP SQL code, what are valid case distinctions? Note: There are 2 correct answers to this question.\n\nA. SELECT FROM dbtab1\nFIELDS F1,\nCASE\nWHEN F2 = '1' THEN 'Value 1'\nWHEN F2 = '2' THEN 'Value 2' ELSE 'Value for the rest'\nEND AS f_case\nINTO TABLE @et_t1.\n\nB. SELECT FROM dbtab1\nFIELDS F1,\nCASE\nWHEN F2 = '1' THEN 'Value 1'\nWHEN F2 < F3 AND F2 = '2' THEN 'Value 2'\nWHEN OTHERS 'Value for the rest'\nENDCASE AS f_case\nINTO TABLE @gt_t1.\n\nC. SELECT FROM dbtab1\nFIELDS F1,\nCASE F2\nWHEN '1' THEN 'Value 1'\nWHEN '2' THEN 'Value 2'\nELSE 'Value for the rest'\nEND AS f_case\nINTO TABLE @gt_t1.\n\nD. SELECT FROM dbtab1\nFIELDS F1,\nCASE F2\nWHEN '1' THEN 'Value 1'\nWHEN '2' THEN 'Value 2'\nWHEN OTHERS 'Value for the rest'\nENDCASE AS f_case\nINTO TABLE @gt_t1."
+    ,"A": "SELECT FROM dbtab1 FIELDS F1, \nCASE WHEN F2 = '1' THEN \n'Value 1' WHEN F2 = '2' \nTHEN 'Value 2' ELSE 'Value for the rest' END AS f_case INTO TABLE @et_t1.",
+    "B": "SELECT FROM dbtab1 FIELDS F1, CASE WHEN F2 = '1' THEN 'Value 1' WHEN F2 < F3 AND F2 = '2' THEN 'Value 2' ELSE 'Value for the rest' END AS f_case INTO TABLE @gt_t1.",
+    "C": "SELECT FROM dbtab1 FIELDS F1, CASE F2 WHEN '1' THEN 'Value 1' WHEN '2' THEN 'Value 2' ELSE 'Value for the rest' END AS f_case INTO TABLE @gt_t1.",
+    "D": "SELECT FROM dbtab1 FIELDS F1, CASE F2 WHEN '1' THEN 'Value 1' WHEN '2' THEN 'Value 2' ELSE 'Value for the rest' END AS f_case INTO TABLE @gt_t1.",
+    "CorrectOption(s)": ["A","C"]  
+  },
+  {
+    "QuestionID": 5,
+    "QuestionText": "Given the following code in an SAP S/4HANA Cloud private edition tenant:\n1 CLASS zcl_demo_class DEFINITION.\n2 METHODS: m1.\n3 ENDCLASS.\n4 CLASS zcl_demo_class IMPLEMENTATION.\n5 METHOD m1.\n6 CALL FUNCTION 'ZF1'.\n7 ENDMETHOD.\n8 ENDCLASS.\n\nThe class zcl_demo_class is in a software component with the language version set to 'ABAP Cloud'.\nThe function module 'ZF1' is in a different software component with the language version set to 'Standard ABAP'. Both the class and function module are customer created.\n\nRegarding line #6, which of the following are valid statements? \nNote: There are 2 correct answers.",
+    "A": "The function call will fail since 'ZF1' cannot be called in ABAP Cloud.",
+    "B": "The function call will succeed if 'ZF1' is whitelisted in ABAP Cloud.",
+    "C": "The function call will always succeed because 'ZF1' is in the same customer namespace.",
+    "D": "The function call will fail if 'ZF1' is not whitelisted in ABAP Cloud.",
+    "CorrectOption(s)": ["B", "D"]
+}
+]
