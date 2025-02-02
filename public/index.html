@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Website</title>
+    <title>ABAPD_C2309</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -42,19 +42,19 @@
 </head>
 <body>
     <header>
-        <h1>Quiz Website</h1>
+        <h1>ABAPD_C2309</h1>
         <div id="timer">Time Taken: <span id="time">00:00</span></div>
         <button id="logout">Logout</button>
     </header>
     <main>
         <div id="quiz-container"></div>
-        <button id="start">Start Quiz</button>
+        <button id="start">Start Test</button>
         <button id="submit" style="display: none;">Submit</button>
         <button id="next" style="display: none;">Next</button>
         <div id="feedback"></div>
         <div id="result"></div>
         <div class="button-container" id="end-buttons" style="display: none;">
-            <button class="button restart" id="restart">Restart Quiz</button>
+            <button class="button restart" id="restart">Restart Test</button>
         </div>
     </main>
     <script>
@@ -130,10 +130,10 @@
         function calculateScore() {
             clearInterval(timerInterval);
             const result = document.getElementById('result');
-            result.innerHTML = `<h2>Quiz Completed!</h2>
+            result.innerHTML = `<h2>Test Completed!</h2>
                                 <p>You scored <strong>${score}</strong> out of <strong>${questions.length}</strong>.</p>
                                 <p>Time taken: <strong>${document.getElementById('time').textContent}</strong></p>`;
-            alert(`Quiz Completed!\nYou scored ${score} out of ${questions.length}.\nTime taken: ${document.getElementById('time').textContent}`);
+            alert(`Test Completed!\nYou scored ${score} out of ${questions.length}.\nTime taken: ${document.getElementById('time').textContent}`);
             document.getElementById('end-buttons').style.display = 'flex';
         }
 
