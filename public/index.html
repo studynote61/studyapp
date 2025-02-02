@@ -97,7 +97,7 @@
             questionText.textContent = question.QuestionText;
             questionElement.appendChild(questionText);
 
-            ['A', 'B', 'C', 'D'].forEach(option => {
+            ['A', 'B', 'C', 'D','E'].forEach(option => {
                 if (question[option]) {
                     const label = document.createElement('label');
                     const input = document.createElement('input');

@@ -1,47 +1,720 @@
 [
   {
-    "QuestionID": 1,
-    "QuestionText": "What is the capital of India?",
-    "A": "Mumbai",
-    "B": "Delhi",
-    "C": "Kolkata",
-    "D": "Chennai",
-    "CorrectOption(s)": "B"  
+      "QuestionID": 1,
+      "QuestionText": "1. Which function call returns 0?",
+      "A": "A. Count_any_of (val - ‘ABAP ABAP abap' sub \"AB\")",
+      "B": "B. Count (v-a 'AlBA P ABAP abasubp - ''AB ')",
+      "C": "C. find_any_of (val = \"ABAP ABAP abap' sub = \"AB\")",
+      "D": "d. find_any_not_of (val = \"ABAP ABAP abap' sub = \"AB\")",
+      "CorrectOption(s)": "C" 
   },
   {
-    "QuestionID": 2,
-    "QuestionText": "Which are prime numbers?",
-    "A": "2",
-    "B": "4",
-    "C": "5",
-    "D": "6",
-    "CorrectOption(s)": ["A", "C"]
+      "QuestionID": 2,
+      "QuestionText": "2. In which products must you use the ABAP Cloud Development Model? \nNote: There are 2 correct",
+      "A": "A. SAP S/4HANA Cloud, private edition",
+      "B": "B. SAP BTP, ABAP environment",
+      "C": "C. SAP S/4HANA on premise",
+      "D": "D. SAP S/4HANA Cloud, public edition",
+      "CorrectOption(s)": ["B", "D"] 
   },
   {
-    "QuestionID": 3,
-    "QuestionText": "HTML stands for?",
-    "A": "Hyper Text Markup Language",
-    "B": "High Tech Machine Language",
-    "C": "Hyperlink Text Management Language",
-    "D": "Hyper Transfer Markup Language",
-    "CorrectOption(s)": "A"  
+      "QuestionID": 3,
+      "QuestionText": "3. Which RESTful Application Programming object can be used to organize the display of fields in an\napp?",
+      "A": "Data model view",
+      "B": "Metadata extension",
+      "C": "Service definition",
+      "D": "Projection view",
+      "CorrectOption(s)": "B" 
   },
   {
-    "QuestionID": 4,
-    "QuestionText": "In the following ABAP SQL code, what are valid case distinctions? Note: There are 2 correct answers to this question.\n\nA. SELECT FROM dbtab1\nFIELDS F1,\nCASE\nWHEN F2 = '1' THEN 'Value 1'\nWHEN F2 = '2' THEN 'Value 2' ELSE 'Value for the rest'\nEND AS f_case\nINTO TABLE @et_t1.\n\nB. SELECT FROM dbtab1\nFIELDS F1,\nCASE\nWHEN F2 = '1' THEN 'Value 1'\nWHEN F2 < F3 AND F2 = '2' THEN 'Value 2'\nWHEN OTHERS 'Value for the rest'\nENDCASE AS f_case\nINTO TABLE @gt_t1.\n\nC. SELECT FROM dbtab1\nFIELDS F1,\nCASE F2\nWHEN '1' THEN 'Value 1'\nWHEN '2' THEN 'Value 2'\nELSE 'Value for the rest'\nEND AS f_case\nINTO TABLE @gt_t1.\n\nD. SELECT FROM dbtab1\nFIELDS F1,\nCASE F2\nWHEN '1' THEN 'Value 1'\nWHEN '2' THEN 'Value 2'\nWHEN OTHERS 'Value for the rest'\nENDCASE AS f_case\nINTO TABLE @gt_t1."
-    ,"A": "SELECT FROM dbtab1 FIELDS F1, \nCASE WHEN F2 = '1' THEN \n'Value 1' WHEN F2 = '2' \nTHEN 'Value 2' ELSE 'Value for the rest' END AS f_case INTO TABLE @et_t1.",
-    "B": "SELECT FROM dbtab1 FIELDS F1, CASE WHEN F2 = '1' THEN 'Value 1' WHEN F2 < F3 AND F2 = '2' THEN 'Value 2' ELSE 'Value for the rest' END AS f_case INTO TABLE @gt_t1.",
-    "C": "SELECT FROM dbtab1 FIELDS F1, CASE F2 WHEN '1' THEN 'Value 1' WHEN '2' THEN 'Value 2' ELSE 'Value for the rest' END AS f_case INTO TABLE @gt_t1.",
-    "D": "SELECT FROM dbtab1 FIELDS F1, CASE F2 WHEN '1' THEN 'Value 1' WHEN '2' THEN 'Value 2' ELSE 'Value for the rest' END AS f_case INTO TABLE @gt_t1.",
-    "CorrectOption(s)": ["A","C"]  
+      "QuestionID": 4,
+      "QuestionText": "4. Given this code\nData: go_super type ref to lcl_super,\n        go_sub type ref to lcl_sub,\n        \n    go_sub = NEW#(...).\n    go_super = go_sub.\nWith lcl_super being supperclass of lcl_sub\nWhen accessing the subclass instance through go_super, what can you do? \nNote: There are 2 correct",
+      "A": "A. Access the inherited private components.",
+      "B": "B. Access the inherited public components.",
+      "C": "C. Call a subclass specific public method",
+      "D": "D. Call inherited public redefined methods.",
+      "CorrectOption(s)": ["B", "D"] 
   },
   {
-    "QuestionID": 5,
-    "QuestionText": "Given the following code in an SAP S/4HANA Cloud private edition tenant:\n1 CLASS zcl_demo_class DEFINITION.\n2 METHODS: m1.\n3 ENDCLASS.\n4 CLASS zcl_demo_class IMPLEMENTATION.\n5 METHOD m1.\n6 CALL FUNCTION 'ZF1'.\n7 ENDMETHOD.\n8 ENDCLASS.\n\nThe class zcl_demo_class is in a software component with the language version set to 'ABAP Cloud'.\nThe function module 'ZF1' is in a different software component with the language version set to 'Standard ABAP'. Both the class and function module are customer created.\n\nRegarding line #6, which of the following are valid statements? \nNote: There are 2 correct answers.",
-    "A": "The function call will fail since 'ZF1' cannot be called in ABAP Cloud.",
-    "B": "The function call will succeed if 'ZF1' is whitelisted in ABAP Cloud.",
-    "C": "The function call will always succeed because 'ZF1' is in the same customer namespace.",
-    "D": "The function call will fail if 'ZF1' is not whitelisted in ABAP Cloud.",
-    "CorrectOption(s)": ["B", "D"]
-}
+      "QuestionID": 5,
+      "QuestionText": "5. Given the following code in an SAP S/4HANA Cloud private edition tenant: \n1 CLASS zcl demo_class DEFINLILON.\n2 METHOOS: m1.\n3 ENDCLASS.\n4 CLASS zcl demo_class implementation.\n5 METHOO ml.\n6 CALL FUNCTION 'ZF1'.\n7 ENDMETHOO.\n8 ENDCLASS.\n\nThe class zcl_demo_class isiin a’software component with the language version set to \"ABAP Cloud\".\nThe function module ZF1'is in a different software component with the language version set to\n\"Standard ABAP\". Both the class and function module are customer created.\nRegarding line #6, which of the following are valid statements? \nNote: There are 2 correct answers",
+      "A": "A. ZF1'can be called only if it is released for cloud development.",
+      "B": "B. 'ZF1'can be called if a wrapper is created for it and the wrapper itself is released for cloud development.",
+      "C": "C. \"ZF1\" can be called whether it is released or not for cloud development",
+      "D": "D. ZF1\"can be called if a wrapper is created for it but the wrapper itself is not released for cloud development.",
+      "CorrectOption(s)": "B" 
+  },
+  {
+      "QuestionID": 6,
+      "QuestionText": "6. You have attached a system field to an input parameter of a CDS view entity as follows:\n define view entity z_entity with parameter\n @environment.systemField: #system_language\n language: spars...\n What are the effects of this annotation? \nNote: There are 2 correct answers to this question.",
+      "A": "A. It is no longer possible to pass your own value to the parameter.",
+      "B": "B. You can still override the default value with a value of your own.",
+      "C": "C. The value of sy-langu will be passed to the CDS view automatically when you use the CDS view in ABAP but not when you use it in another view entity",
+      "D": "D. The value of sy-langu will be passed to the CDS view automatigally both when you use the CDS view in ABAP and in another CDS view entity (view on View)",
+      "CorrectOption(s)": ["B", "D"] 
+  },
+  {
+      "QuestionID": 7,
+      "QuestionText": "7. In the assignment.\ndata (gv_result)=1/8.\nwhat will be the data type of gv_result?",
+      "A": "A. TYPE I",
+      "B": "B. TYPEP DECIMALS 2",
+      "C": "C. TYPE DEFLOAT 16",
+      "D": "D. TYPE P DECIMALS 3",
+      "CorrectOption(s)": "A" 
+  },
+  {
+      "QuestionID": 8,
+      "QuestionText": "8. Given this code,\nINTERFACE if1.\nmethod m1.\nENDINTERFACE.\nclass lcl1 definition.\n....\nINTERFACE if1.\nENDCLASS.\n...\nclass lcl2 definition.\n...\ndata mo_if1 type ref to if1.\n...\nENDCLASS.\n...\nWhat are valid statements? Note: There are 3 correct answers to this question",
+      "A": "A. In class CL2, the interface method is named if1-m1.",
+      "B": "B. Class CL2 uses the interface",
+      "C": "C. In class cl1 , the interface method name if-m1",
+      "D": "D. class CL1 uses the interface",
+      "E": "E. Class CL1 implements the interface.",
+      "CorrectOption(s)": ["B", "C", "E"] 
+  },
+  {
+      "QuestionID": 9,
+      "QuestionText": "9. Given this code \n\ndata: go_super type ref to lcl_super,\n    go_sub1 type ref to lcl_sub1,\n    go_sub2 type ref to lcl_sub2,\n    \n    go_super = new go_sub2(...).\n    go_super = new go_sub1(...).\n    go_sub1 = CAST#( go_super ).\n    go_sub1-> sub1_meth1(...).\n    \n    go_sub2 = CAST#( go_super ).\n    go_sub2-> sub2_meth1(...).\nWith Icl_super being superclass for Icl_sub1 and Icl_sub2 and with methods subl_meth1 and\nsub2_meth1 being subclass-specific methods of Id_subl orflel_sub2, respectively\nWhat will happen when executing these casts? Note: There are 2 correct answers",
+      "A": "A. go_sub1->sub1_meth 1(...). will work.",
+      "B": "B. go_sub2->sub2 meth 1(...). will work",
+      "C": "C. go_sub1=CAST#(go super), will not work , go_sub2=CAST#( go super), will work.",
+      "D": "D. go_sub1 = CAST #(go_super), will work , go_sub2 = CAST #(go_super). will not work.",
+      "CorrectOption(s)": ["B", "D"] 
+  },
+  {
+      "QuestionID": 10,
+      "QuestionText": "10. Setting a field to read-only in which object would make the field read-only in all applications of the\nRESTful Application Programming model?",
+      "A": "A. Service definition",
+      "B": "B. Metadata extension",
+      "C": "C. Behavior definition",
+      "D": "D. Projection view",
+      "CorrectOption(s)": "C" 
+  },
+  {
+      "QuestionID": 11,
+      "QuestionText": "11. What are some features of a unique secondary key? Note: There are 2 correct answers to this",
+      "A": "A. It is created with the first read access of a table.",
+      "B": "B. It is created when a table is filled.",
+      "C": "C. It is updated when the table is modified.",
+      "D": "D. It is updated when the modified table is read again,",
+      "CorrectOption(s)": ["B", "C"] 
+  },
+  {
+      "QuestionID": 12,
+      "QuestionText": "12. Which of the following results in faster access to internal tables? Note: There are 3 correct answers\nto this question.",
+      "A": "A. In a sorted internal table, specifying the primary key partially from the left without gaps.",
+      "B": "B. In a hashed internal table, specifying the primary key.completely.",
+      "C": "C. In a sorted internal table, specifying the primary key completely.",
+      "D": "D. In a standard internal table, specifying the primary key partially from the left without gaps.",
+      "E": "E. In a hashed internal table, specifying thé primary key partially from the left without gaps.",
+      "CorrectOption(s)": ["A", "B", "C"] 
+  },
+  {
+      "QuestionID": 13,
+      "QuestionText": "13. You want to define the following CDS view entity with an input parameter:\nDefine view entity Z CONVERT\nWith parameters currency     ???\nWhich of the following can you use to replace \"???? Note: There are 2 correct answers to this",
+      "A": "A built-in ABAP Dictionary type",
+      "B": "A data element",
+      "C": "A built-in ABAP type",
+      "D": "A component of an ABAP Dictionary structure",
+      "CorrectOption(s)": ["A", "B"] 
+  },
+  {
+      "QuestionID": 14,
+      "QuestionText": "14. Match the sequence of execution in the dropdown list to the operation. (1 is the highest priority and\n3 is the lowest priority.) \nA. Addition (+) and Subtraction (-)Choose an item\nB. Numeric functions Choose an item\nC. Multiplication (*) and Division (/)Choose an item",
+      "A": "ABC",
+      "B": "BCA",
+      "C": "CAB",
+      "CorrectOption(s)": "B" 
+  },
+  {
+      "QuestionID": 15,
+      "QuestionText": "Question 15\nIn a subclass sub1 you want to redefine a component of a superclass supefl.How do you achieve\nthis? Note: There are 2 correct answers to this question.",
+      "A": "You add the clause REDEFINITION to the component in subl.",
+      "B": "You implement the redefined component in sub1.",
+      "C": "You implement the redefined component for assecond time in superl.",
+      "D": "You add the clause REDEFINITION to the componentiin superl.",
+      "CorrectOption(s)": ["A", "B"] 
+  },
+  {
+      "QuestionID": 16,
+      "QuestionText": "Question 16\nIn a program you find this source code\nAUTHORITY-CHECK OBJECT //DWO/TRVL ‘\nID'CNTRY' FIELD 'DE'\nID ACTVT FIELD '03\".\nWhich of the following apply? Note: There are 2 correct answers to this question.",
+      "A": "A. AUTHORITY CHECK verifies voinether a user is authorized far /DMOITRVL\" with the listed field values.",
+      "B": "B. If the user is authorized for 'CNTRY = IDE' AND for 'ACTVT = '03 then the return code is 0,",
+      "C": "C. If the user is NOT authorized for 'CNTRY1 = 'DE' OR for 'ACTT' = '03 then the program will terminate.",
+      "D": "D. If the user is authorized for FCNTRY = 'DE' then the return code is always 0.",
+      "CorrectOption(s)": ["A", "B"] 
+  },
+  {
+      "QuestionID": 17,
+      "QuestionText": "17. Which of the following are valid sort operations for internal tables? Note: There are 3 correct\nanswers to this question.",
+      "A": "Sort a sorted table using SORT itab DESCENDING.",
+      "B": "Sort a sorted table using SORT itab BY field1 ASCENDING field2 DESCENDING.",
+      "C": "Sort a Standard table using SORT itab BY field1 field2 .",
+      "D": "Sort a Standard table using SORT itab.",
+      "E": "Sort a Standard table using SORT itab BY ASCENDING",
+      "CorrectOption(s)": ["C", "D", "E"] 
+  },
+  {
+      "QuestionID": 18,
+      "QuestionText": "18. Which statement can you use to change the contents of a row of data in an internal table?",
+      "A": "Append table",
+      "B": "Insert table",
+      "C": "Update table",
+      "D": "Modify table",
+      "CorrectOption(s)": "D"
+  },
+  {
+      "QuestionID": 19,
+      "QuestionText": "19. In an Access Control Object, which clauses are used? Note: There are 3 correct answers to this\nquestion.",
+      "A": "Where (to specify the access conditions)",
+      "B": "Return code (to assign the retum code of the authority check)",
+      "C": "Define role (to specify the role name)",
+      "D": "Revoke (to remove access to the data source)",
+      "E": "Grant (to identify the data source)",
+      "CorrectOption(s)": ["A", "C", "E"]
+  },
+  {
+      "QuestionID": 20,
+      "QuestionText": "20. You are designing the following select statement in ABAP Open SQL:\n1    DAIA gt flights type standard teble of demo_cds flights\n2\n3    SELECT\n4\n5    FROM demo_cds_flights\n6\n7    FIELDS carrid, connid, fldate, SUM(payment_sum), currency\n8\n9    WHERE fldate > @sy-datum\n10\n11 GROUP BY carrid, connid, fldate\n12\n13 ORDER BY carrid, connid\n14\n15\nTo adhere to the most recent ABAP SQL syntax conventions from SAP, on which line must you insert\nthe \"INTO TABLE @gt flights\" clause to complete the SQL statement?",
+      "A": "A. #15",
+      "B": "B. #6",
+      "C": "C. #8",
+      "D": "D. #4",
+      "CorrectOption(s)": "A"
+  },
+  {
+      "QuestionID": 21,
+      "QuestionText": "21. Given this code \n\ndata: go_super type ref to lcl_super,\n    go_sub1 type ref to lcl_sub1.\n....\ngo_sub1 = CAST#( go_super ).\n    go_sub1-> sub1_meth1(...).\nwith which predicate condition can you ensure that the CAST will work?",
+      "A": "A. IS BOUND",
+      "B": "B. IS INSTANCE OF",
+      "C": "C. IS NOTINITIAL",
+      "D": "D. IS SUPPLIED",
+      "CorrectOption(s)": "B"
+  },
+  {
+      "QuestionID": 22,
+      "QuestionText": "22. What is the sequence priority when evaluating a logical expression?\nA. NOT \nB. OR \nC. AND",
+      "A": "ABC",
+      "B": "CBA",
+      "C": "ACB",
+      "CorrectOption(s)": "C"
+  },
+  {
+      "QuestionID": 23,
+      "QuestionText": "23. Which of the following are parts of the definition of a new database table? Note: There are 2 correct\nanswers to this question.",
+      "A": "A. Field list",
+      "B": "B. Extension",
+      "C": "C. Semantic table attributes",
+      "D": "D. Partitioning attribues",
+      "CorrectOption(s)": ["A", "C"] 
+  },
+  {
+      "QuestionID": 24,
+      "QuestionText": "24. In a RESTful Application Programming application, in which objects do you bind a CDS view to create\na value help? \nNote: There are 3 correct answers to this question.",
+      "A": "A. Data Model View",
+      "B": "B. Service definition",
+      "C": "C. Behavior definition",
+      "D": "D. Projection View",
+      "E": "E. MetaData Extension",
+      "CorrectOption(s)": ["A", "D", "E"]
+  },
+  {
+      "QuestionID": 25,
+      "QuestionText": "25. Which of the following are incomplete ABAP types? Note: There are 2 correct answers to this\nquestion.",
+      "A": "A. P",
+      "B": "B. String",
+      "C": "C. C",
+      "D": "D. T",
+      "CorrectOption(s)": ["A", "C"]
+  },
+  {
+      "QuestionID": 26,
+      "QuestionText": "26. Which of the following integration frameworks have been released for ABAP cloud development?\nNote: There are 3 correct answers to this question.",
+      "A": "OData services",
+      "B": "Business events",
+      "C": "SOAP consumption",
+      "D": "Business Add-ins (BAdls)",
+      "E": "CDS Views",
+      "CorrectOption(s)": ["A", "B", "C"]
+  },
+  {
+      "QuestionID": 27,
+      "QuestionText": "27. Given this code,\nINTERFACE if1.\n     method m1.\nENDINTERFACE.\nclass cl1 definition.\n      INTERFACE if1.\n      PUBLIC Section.\n      Method m2.\nENDCLASS.\n...\ndata go_if1 type ref to if1.\ndata go_cl1 type ref to cl1.\ngo_cl1 = NEW #(...).\ngo_if1 =  go_cl1.\n \n\nWhat are valid statements? Note: There are 3 correct answers to this question.",
+      "A": "Instead of go_cl1= NEW #() you could use go_iff - NEW #{(...).",
+      "B": "go_ifl may call method m2 with go if->m2(...).",
+      "C": "Instead of go cl1 = NEW #{...) you could use go ifl = NEW cl1(....).",
+      "D": "go_ifl may call method m1 with go_ift->m1().",
+      "E": "go_cl1 may call method m1 with go_d1->if1~m1().",
+      "CorrectOption(s)": ["C", "D", "E"]
+  },
+  {
+      "QuestionID": 28,
+      "QuestionText": "28\nWhich of the following ABAP SQL statements are valid? Note: There are 2 correct answers to this\nquestion.\nA. SELECT FROM /dmo/connection\nFIELDS\nMAX( distance ) AS dist_max,\nMIN( distance ) AS dist_min\nINTO TABLE @DATA(lt_hits).\n\nB.  SELECT FROM /dmo/connection\nFIELDS\ncarrid,\nairpfrom\nGROUP BY carrid, connid\nINTO TABLE @DATA(lt_hits).\n\nC.  SELECT FROM /dmo/connection\nFIELDS\ncarrid,\nairpfrom,\nMAX( distance ) AS dist_max,\nMIN( distance ) AS  dist_min\nGROUP BY  carrid, airpfrom\nINTO TABLE @IDATA( lt_hits) .\n\nD. SELECT FROM /dmo/connection\nFIELDS\ncarrid ,\nairpfrom,\nMAX( distance ) AS dist_max,\nMING distance ) AS dist_min\nINTO TABLE @DATA(lt_hits).",
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D",
+      "CorrectOption(s)": ["A", "C"]
+  },
+  {
+      "QuestionID": 29,
+      "QuestionText": "In ABAP SQL, which of the following retrieves the association field _Airline-Name of a CDS view?",
+      "A": "A. \\_Airline-Name",
+      "B": "B. “_Airline Name",
+      "C": "C. /_Airline Name",
+      "D": "D. @_Airline-Name",
+      "CorrectOption(s)": "A"
+  },
+  {
+      "QuestionID": 30,
+      "QuestionText": "Which internal table type allows unique and non-unique keys?",
+      "A": "A. Hashed",
+      "B": "B. Standard",
+      "C": "C. Sorted",
+      "CorrectOption(s)": "C"
+  },
+  {
+      "QuestionID": 31,
+      "QuestionText": "In ABAP SQL, which of the following can be assigned an alias? Note: There are 2 correct answers to\nthis question.",
+      "A": "A. field (from field list)",
+      "B": "B. order criterion (from order by clause)",
+      "C": "C. group criterion (from group by clause)",
+      "D": "D. database table",
+      "CorrectOption(s)": ["A", "D"]
+  },
+  {
+      "QuestionID": 32,
+      "QuestionText": "Which patterns raise an exception?\nNote: There are 3 correct answers to this question.",
+      "A": "DATA:gv_target TYPE d. CONSTANTS: gco_date TYPE d VALUE '20331233\". gv_target EXACT ( geo_date).",
+      "B": "gv_target TYPE c LENGTH 5. CONSTANTS: ECO_string TYPE string VALUE '0123456789ABCDEF'. gv_target = EXACT (gco_string+5 (6) ).",
+      "C": "DATA: Ev_target TYPE p DECIMALS 3. CONSTANTS: gco_int1 TYPE i VALUE 2. Ev_target =EXACT #(2 / gco_int1).",
+      "D": "DATA:gv_target TYPE string. CONSTANTS: gco_string TYPE C LENGTH 16 VALUE '0123456789ABCDEF'. gv_target = EXACT # (gco_string+5 (5) ).",
+      "E": "DATA: gv_target TYPE p DECIMALS 2. CONSTANTS: go int1 TYPE i VALUE 3. gv_target = EXACT(2 / geo_int1).",
+      "CorrectOption(s)": ["A", "B", "E"]
+  },
+  {
+      "QuestionID": 33,
+      "QuestionText": "Which of the following are features of Core Data Services? \nNote: There are'3 correct answers",
+      "A": "Associations",
+      "B": "Inheritance",
+      "C": "Annotations",
+      "D": "SQL",
+      "E": "Delegation",
+      "CorrectOption(s)": ["A", "C", "D"]
+  },
+  {
+      "QuestionID": 34,
+      "QuestionText": "Why would you use Access Controls with CDS Views? Note: There are 2 correct answers",
+      "A": "A. The system field sy-subrc is set, giving you the result of the authorization check",
+      "B": "B. You do not have to remember to implement AUTHORITY CHECK statements.",
+      "C": "C. All of the data from the data sources is loaded into your application automatically and filtered there according to the user's authorization.",
+      "D": "D. Only the data corresponding to the user's authorization is transferred from the database to the application layer.",
+      "CorrectOption(s)": ["B", "D"]
+  },
+  {
+      "QuestionID": 35,
+      "QuestionText": "Which ABAP SQL clause allows the use of inline declarations?",
+      "A": "A. INTO CORRESPONDING FIELDS OF",
+      "B": "B. FROM",
+      "C": "C. FIELDS",
+      "D": "INTO",
+      "CorrectOption(s)": "D"
+  },
+  {
+      "QuestionID": 36,
+      "QuestionText": "What RESTful Application Programming object contains only the fields required for a particular app?",
+      "A": "A. Database view",
+      "B": "B. Metadata extension",
+      "C": "C. Projection view",
+      "D": "D. Data model view",
+      "CorrectOption(s)": "C"
+  },
+  {
+      "QuestionID": 37,
+      "QuestionText": "After you created a database table inthe RESTful Application Programming model, what do you\ncreate next?",
+      "A": "A projection view.",
+      "B": "A data model view",
+      "C": "metadata extension",
+      "D": "A service definition",
+      "CorrectOption(s)": "B"
+  },
+  {
+      "QuestionID": 38,
+      "QuestionText": "In class ZCL_CLASS_A, you use the statement DATA var TYPE ***\nWhat may stand in place of ***? \nNote: There are 2 correct answers to this question.",
+      "A": "The name of a type defined privately in another class",
+      "B": "The name of a domain from the ABAP Dictionary",
+      "C": "The name of a type defined privately in class ZCL_CLASS_A",
+      "D": "The name of a data element from the ABAP Dictionary",
+      "CorrectOption(s)": ["A", "D"]
+  },
+  {
+      "QuestionID": 39,
+      "QuestionText": "Which extensibility type does SAP recommend you use to enhance the existing Ul for an SAP Fiori\napp?",
+      "A": "A. Key user",
+      "B": "B. Developer",
+      "C": "C. Side-by-side",
+      "D": "Classic",
+      "CorrectOption(s)": "A"
+  },
+  {
+      "QuestionID": 40,
+      "QuestionText": "In RESTful Application Programming, which EML statement retrieves an object?",
+      "A": "A. Read entity",
+      "B": "B. Getentity",
+      "C": "C. Find entity",
+      "D": "D. Select entity",
+      "CorrectOption(s)": "A"  
+  },
+  {
+      "QuestionID": 41,
+      "QuestionText": "What are advantages of using a field symbol for internal table row access? \nNote: There are 2 correct answers to this question.",
+      "A": "A modify statement to write changed content back to the table is not required.",
+      "B": "using filed symbol is faster than using work area",
+      "C": "The row content is copied to the field symbol instead to a work area",
+      "D": "The field symbol can be reused for other programs.",
+      "CorrectOption(s)": ["A", "C"]
+  },
+  {
+      "QuestionID": 42,
+      "QuestionText": "What is the purpose of a foreign key relationship between two tables in the ABAP Dictionary?",
+      "A": "A. Tocreate a corresponding foreign key relationship in the database",
+      "B": "B. To ensure the integrity of data in the corresponding database tables",
+      "C": "C. To document the relationship between the two tables",
+      "D": "D. To create a corresponding index in the database",
+      "CorrectOption(s)": "B"
+  },
+  {
+      "QuestionID": 43,
+      "QuestionText": "When processing an internal table with the statement LOOP AT itab... ENDLOOP, what system\nvariable contains the current row number?",
+      "A": "sy-subrc",
+      "B": "sy-linno",
+      "C": "sy-index",
+      "D": "sy-tabix",
+      "CorrectOption(s)": "D"
+  },
+  {
+      "QuestionID": 44,
+      "QuestionText": "In what order are objects created to generate a RESTful Application Programming application?\nA. Database table \nB. Service binding Projection view \nC. Service definition \nD. Data model view",
+      "A": "ABCD",
+      "B": "ADBC",
+      "C": "ACBD",
+      "D": "ADCB",
+      "CorrectOption(s)": "B"
+  },
+  {
+      "QuestionID": 45,
+      "QuestionText": "What are some of the reasons that Core Data Services are preferable to the classical approach to\ndata modeling? \nNote: There are 2 correct answers to this question.",
+      "A": "They compute result on application server",
+      "B": "They transfer computational results to the application server.",
+      "C": "They avoid data transfer completely.",
+      "D": "They implement code push down",
+      "CorrectOption(s)": ["B", "D"]
+  },
+  {
+      "QuestionID": 46,
+      "QuestionText": "What RESTful Application Programming feature is used to ensure the uniqueness of a semantic key?",
+      "A": "A. Validation",
+      "B": "B. Determination",
+      "C": "C. Action",
+      "D": "D. Constraint",
+      "CorrectOption(s)": "A"
+  },
+  {
+      "QuestionID": 47,
+      "QuestionText": "Given this code,\n< some coding >\nIF <condition>.\nRAISE EXCEPTION TYPE zcxl.\nEXFORTTHG\nparaml = value1\nparam2 = value2\nprevious = value3.\nENDIF.\nWhat are valid statements?\n Note: There 3re 2 correct answers to this question.",
+      "A": "\"zcx1\"is a dictionary structure, and \"param1\" and \"param2\" are same-named components of this structure.",
+      "B": "\"previous\" expects the reference to a previous exception",
+      "C": "The code creates an exception object and raises an exception.",
+      "D": "\"param1\" and \"param2\" are predefined names.",
+      "CorrectOption(s)": ["B", "C"]
+  },
+  {
+      "QuestionID": 48,
+      "QuestionText": "Given this code,\ntarget_itab = VALUE #( FOR row IN source itab(\nfield1 = row-field1\nfield2 = row-field2\nFieldn = row-fieldn )\n).\nWhich of the following statements are correct? \nNote: There are 2 correct answers to this question.",
+      "A": "A. FOR defines a loop that runs over the content of source_itab",
+      "B": "B. row is a predefined name and cannot be chosen arbitrarily.",
+      "C": "C. source_itab is only visible within the loop.",
+      "D": "D. row is only visible within the loop.",
+      "CorrectOption(s)": ["A", "D"]
+  },
+  {
+      "QuestionID": 49,
+      "QuestionText": "For what kind of applications would you consider using on-stack developer extensions? \nNote: There are 2 correct answers to this question.",
+      "A": "A. Applications that run separate from SAP S/4HANA",
+      "B": "B. Applications that provide APIs for side by side SAP BTP apps",
+      "C": "C. Applications that access SAP S/4HANA data using complex SQL",
+      "D": "D. Applications that integrate data from several different systems",
+      "CorrectOption(s)": ["B", "C"]
+  },
+  {
+      "QuestionID": 50,
+      "QuestionText": "In Core Data Services View Entity Data Definition:\n\nYou want to provide a short description of the data definition for developers that will be attached to\nthe database view\nWhich of the following annotations would do this",
+      "A": "A. @EndUser Text label",
+      "B": "B. @Ul.badge.title.label",
+      "C": "C. @EndUserText.quickinfo",
+      "D": "D. @UI headerinto description label",
+      "CorrectOption(s)": "A"
+  },
+  {
+      "QuestionID": 51,
+      "QuestionText": "Given the following code,\nDAIA gv_text1 type string. ##EC_NEEDED\nDATA gv_text2 type string. \"#NEEDED\nWhat are valid statements?\n Note: There are 2 correct answers to this question.",
+      "A": "A. The pragma is not checked by the syntax checker.",
+      "B": "B. ##NEEDED is checked by the syntax checker.",
+      "C": "C. ##EC_NEEDED is not checked by the syntax checker.",
+      "D": "D. The pseudo-comment is checked by the syntax checker",
+      "CorrectOption(s)": ["A", "B"]
+  },
+  {
+      "QuestionID": 52,
+      "QuestionText": "Given the following code in an SAP S/4HANA Cloud private edition tenant:\n\n1 CLASS zcl demo_class DEFINLILON.\n2 METHOOS: m1.\n3 ENDCLASS.\n4 CLASS zcl demo_class implementation.\n5 METHOO ml.\n6 CALL FUNCTION 'ZF1'.\n7 ENDMETHOO.\n8 ENDCLASS.\nThe class zcl_demo_class isiin a’software component with the language version set to \"ABAP Cloud\".\nThe function module ZF1'is in a different software component with the language version set to\n\"Standard ABAP\". Both the class and function module are customer created.\nRegarding line #6, which of the following are valid statements?",
+      "A": "A. ZF1'can be called only if it is released for cloud development.",
+      "B": "B. 'ZF1'can be called if a wrapper is created for it and the wrapper itself is released for cloud development.",
+      "C": "C. \"ZF1\" can be called whether it is released or not for cloud development",
+      "D": "D. ZF1\"can be called if a wrapper is created for it but the wrapper itself is not released for cloud development.",
+      "CorrectOption(s)": ["B", "D"]
+  },
+  {
+      "QuestionID": 53,
+      "QuestionText": "Given the following Core Data Services View Entity Data Definition,\n@AccessControl.authorizationCheck: #NOT_REQUIRED\nDEFINE VIEW ENTITY demo_cds_data_source_matrix\nAS SELECT FROM\n<source>\n{\n    KEY field_1,\n        field_2,\n        field_3\n}\nWhich of the following types are permitted to be used for <source> on line #4? \nNote: There are 2\ncorrect answers to this question.",
+      "A": "A. Anexternal view from the ABAP Dictionary",
+      "B": "B. A database view from the ABAP Dictionary",
+      "C": "C. CDS DDIC based view",
+      "D": "D. A databased table from the ABAP dictionary",
+      "CorrectOption(s)": ["B", "C"]
+  },
+  {
+      "QuestionID": 54,
+      "QuestionText": "Which restrictions exist for ABAP SQL arithmetic' expressions? \nNote: There are 2 correct answers to\nthis question.",
+      "A": "The operator is allowed only-in floating point expressions.",
+      "B": "The operator/is allowed only in floating point expressions.",
+      "C": "Decimal types and intéger types can NOT be used in the same expression.",
+      "D": "Floating point types and integer types can NOT be used in the same expression.",
+      "CorrectOption(s)": ["B", "D"]
+  },
+  {
+      "QuestionID": 55,
+      "QuestionText": "When does SAP recommend to use a sorted or a hashed table respectively? Note: There are 2\ncorrect answers to this question.",
+      "A": "A. A hashed table, when you read a single record and specify the complete key.",
+      "B": "B. A sorted table, when you read a single record and specify non key fields.",
+      "C": "C. A hashed table, when you read a subset in a loop and specify a part of the key from the left without gaps.",
+      "D": "D. A sorted table, when you read a subset in a loop and specify a part of the key from the left",
+      "CorrectOption(s)": ["A", "D"]
+  },
+  {
+      "QuestionID": 56,
+      "QuestionText": "Which type of legacy code does SAP recommend you eliminate when you review modifications as\npart of an SAP S/4HANA system conversion? \nNote: There are 2 correct answers to this question.",
+      "A": "A. Code that can be redesigned as a key user extension",
+      "B": "B. Code that supports a critical business process",
+      "C": "C. Code that now is identical to a standard SAP object",
+      "D": "D. Code that has less than 10% usage according to usage statistics",
+      "CorrectOption(s)": ["A", "C"]
+  },
+  {
+      "QuestionID": 57,
+      "QuestionText": "When processing a loop with the statement DO... ENDDO, what system variable contains the implicit\nloop counter?",
+      "A": "sy-linno",
+      "B": "sy-subrc",
+      "C": "sy-labix",
+      "D": "sy-index",
+      "CorrectOption(s)": "D"
+  },
+  {
+      "QuestionID": 58,
+      "QuestionText": "Which of the following actions cause an indirect change to a database table requiring a table\nconversion? Note: There are 2 correct answers to this question.",
+      "A": "A. Changing the field labels of a data element that is used in the table definition.",
+      "B": "B. Shortening the length of a domain used in a data element that is used in the table definition.",
+      "C": "C. Renaming a field in a structure that is included in the table definition",
+      "D": "D. Deleting a field from a structure that is included in the table definition.",
+      "CorrectOption(s)": ["C", "D"]
+  },
+  {
+      "QuestionID": 59,
+      "QuestionText": "Class super has subclass sub. Which rules are valid for the sub constructor? \nNote: There are 2 correct\nanswers to this question.",
+      "A": "A. Import parameters can only be evaluated after calling the constructor of super.",
+      "B": "B. The constructor of super must be called before using any components of your own instance.",
+      "C": "C. The method signature can be changed.",
+      "D": "D. Events of your own instance cannot be raised before the registration of a handler in super.",
+      "CorrectOption(s)": ["A", "B"]
+  },
+  {
+      "QuestionID": 60,
+      "QuestionText": "Which of the following string functions are predicate functions? \nNote: There are 2 correct answers\nto this question.",
+      "A": "A. find_any_not_of()",
+      "B": "B. contains_any_of()",
+      "C": "C. matches()",
+      "D": "D. count_any_of()",
+      "CorrectOption(s)": ["B", "C"]
+  },
+  {
+      "QuestionID": 61,
+      "QuestionText": "In RESTful Application Programming, a business object contains which parts? Note: There are 2\ncorrect answers to this question:",
+      "A": "A. Process definition",
+      "B": "B. CDS view",
+      "C": "C. Behavior definition",
+      "D": "D. Authentication rules",
+      "CorrectOption(s)": ["B", "C"]
+  },
+  {
+      "QuestionID": 62,
+      "QuestionText": "Given the following code excerpt that defines an SAP HANA database table:\nDEFINE TABLE demo_table\n{\n    KEY field1 : REFERENCE TO abap.cInt(3);\n    KEY field2 : abap.char(1337);      @Semantics.quantity.unitOfMeasure:'demo_table.field4'\n    field3 : abap.quan(2);\n    field4 : abap.unit(2);\n}\nWhich field is defined incorrectly?",
+      "A": "A. field2",
+      "B": "B. field4",
+      "C": "C. field1",
+      "D": "D. field3",
+      "CorrectOption(s)": "C"
+  },
+  {
+      "QuestionID": 63,
+      "QuestionText": "You have a superclass superl and a subclass/subd'of super1. Each class has an instance constructor\nand a static constructor. The first statement of your program creates an instance of sub1. In which\nsequence will the constructors be executed?\nA. Class constructor of superl.\nB. Instance constructor of'sub1.\nC. Instance constructor of superl\nD. Class constructonof subl.",
+      "A": "ADCB",
+      "B": "ABCD",
+      "C": "ACBD",
+      "D": "ACDB",
+      "CorrectOption(s)": "A"
+  },
+  {
+      "QuestionID": 64,
+      "QuestionText": "What are some properties of database tables? Note: There are 2 correct answers to this question.",
+      "A": "A. They can have any number of key fields.",
+      "B": "B. They store information in two dimensions.",
+      "C": "C. They may have key fields.",
+      "D": "D. They can have relationships to other tables.",
+      "CorrectOption(s)": ["C", "D"]
+  },
+  {
+      "QuestionID": 65,
+      "QuestionText": "In this nested join below\nSELECT FROM t_a AS a\n    LEFT OUTER JOIN t_b AS b\n    LEFT OUTER JOIN t_c AS c\n    ON c~f1 = b~f1 AND c~f2 = b~f2\n    ON b~f1 = a~f1\nWHERE ...\n\nin which way is the join evaluated?\nA. From the left to the right in the order of the tables:\n1. a is joined with b\n2. b is joined with ¢\n\nB. From the top to the bottom in the order of the on  conditions\n1. b is joined with c\n2. a is joined with b\n\nC. From the bottom to the top in the order of the on conditions:\n1. a is joined with b\n2. b is joined with ¢\n\nD. From the right to the left in the order of the tables:\n1. b is joined with c.\n2. b is joined with a.",
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D",
+      "CorrectOption(s)": "A"
+  },
+  {
+      "QuestionID": 66,
+      "QuestionText": "Given the following Core Data Services View Entity Data Definition:\n1 @AccessControl.authorizationCheck: #NOT REQUIRED\n2 DEFINE VIEN ENTITY demo_rds_assoc_element\n3 AS SELECT FROM scarr            \n4 ASSOCIATION OF ONE TO MANY demo_cds_assoc_spfli AS _spfli\n5 ON scarr.carrid = spfli.carrid\n6  {\n7   KEY carrid,\n8  ?        \n9  carrname\n10  }\nThe \"demo_ods_assoc_spfi data source referenced in line #4 contains a field \"connid\" which you\nwould like to expose in the element list.Which of the following statements would do this if inserted\non line #8?",
+      "A": "demo_ods_assoc_spfli.connid,",
+      "B": "spfli-connid,",
+      "C": "_spfli.connid,",
+      "D": "demo_ods_assoc_spfli-connid,",
+      "CorrectOption(s)": "C"
+  },
+  {
+      "QuestionID": 67,
+      "QuestionText": "As a consultant you are posed the following question from a client who is using SAP S/4HANA Cloud,\npublic edition and also SAP BTP, ABAP environment.\n\n\"We are currently using an SAP Fiori app based on SAP Fiori elements that analyzes open orders. We\nhave determined that it should be extended via a new button on the Ul which will perform an onthe-\nfly calculation and display the result in a quick popup for the enduser. We have been informed\nby SAP that all underlying stack layers for the SAP Fiori app have been extensibility enabled.\"\n\nBased on this which of the following extension types would you recommend to the customer to add\nthe new button?",
+      "A": "RAP BO Behavior Extension",
+      "B": "SAP HANA database table extension",
+      "C": "Business Service Extension",
+      "D": "RAP BO Node Extension",
+      "CorrectOption(s)": "A"
+  },
+  {
+      "QuestionID": 68,
+      "QuestionText": "Given the following ABAP SQL statement excerpt from an ABAP program:\n1 Select single * \n2 from spfli\n3 Where Carrid = 'LH' and Connid = \"0400\"\n4 into @data(wa).\n\nYou are given the following information:\n1. The data source \"spfli\" on line #2 is an SAP HANA database table\n2. \"spfli\" will be a large table with over one million rows.\n3. This program is the only one in the system that accesses the table.\n4. This program will run rarely.\n\nBased on this information, which of the following general settings should you set for the spfli\ndatabase table? Note: There are 2 correct answers to this question.",
+      "A": "A. \"Load Unit to \"Column Loadable\"",
+      "B": "B. \"Load Unit' to 'Page Loadable\"",
+      "C": "C. \"Storage Type\" to \"Row Store\"",
+      "D": "D. \"Storage Type\" to \"Column Store\"",
+      "CorrectOption(s)": ["B", "C"]
+  },
+  {
+      "QuestionID": 69,
+      "QuestionText": "What are some characteristics of secondary keys for internal tables? Note: There are 3 correct\nanswers to this question.",
+      "A": "Multiple secondary keys are allowed for any kind of internal table.",
+      "B": "Secondary keys can only be created for standard tables.",
+      "C": "Secondary keys must be chosen explicitly when you actually read from an internal table.",
+      "D": "Hashed secondary keys do NOT have to be unique.",
+      "E": "Sorted secondary keys do NOT have to be unique.",
+      "CorrectOption(s)": ["A", "C", "E"]
+  },
+  {
+      "QuestionID": 70,
+      "QuestionText": "Give the following Core Data Service view entity data definition\n1 @AccessControl.authorizationCheck: #NOT REQUIRED\n2 DEFINE VIEW ENTITY demo_cds_param_view_entity\n3 WITH PARAMETERS\n4 p_date: abap.dats\n5 AS SELECT FROM\n6 sflight\n7 {\n8 KEY carrid,\n9 KEY connid,\n10 KEY fldate,\n11 price,\n12 seatsmax,\n13 seatsoct\n14 }\n15 WHERE fldate > p_date;\nWhich of the following ABAP SQL snippets are syntactically correct ways to provide a value for the\nparameter on line #4? Note: There are 2 correct answers to this question",
+      "A": "A. ..SELECT* FROM demo_cds_param_view entity (p_date: Ssession.system_date)...",
+      "B": "B. ..SELECT * FROM demo_cds_param_view_entity (p_date: '20238181')...",
+      "C": "C. ..SELECT * FROM demo_cds_param_view_entity (p_date = @ (cl_abap_context_info->get_system_date ())...",
+      "D": "D. ..SELECT* FROM demo_cds_param_view_entity (p_date = '20230101')...",
+      "CorrectOption(s)": ["C", "D"]
+  },
+  {
+      "QuestionID": 71,
+      "QuestionText": "You have the following CDS definition:\ndefine view entity Z_ENTITY as select from Z_SOURCE1 as Source1\nassociation to Z_SOURCE2 as _Source2\n\n???\n\n{\n  key carrier_id as Carrier,\n  key connection_id as Connection,\n  cityfrom as DepartureCity,\n  cityto as ArrivalCity,\n}\n\n_Source2\nWhich of the following ON conditions must you insert in place of \"???\"?",
+      "A": "A. ON Z_SOURCE1-carrier_id = _SOURCE2-carrier_id",
+      "B": "B. ON $projection. Carrier Sourge2.carrier",
+      "C": "C. ON $projection.carrier_id=Z_Source2.carrier_id",
+      "D": "D. ON $projection Camer=Source2 carrier_id",
+      "CorrectOption(s)": "A"
+  },
+  {
+      "QuestionID": 72,
+      "QuestionText": "You have two internal tables itab1 and itab2.What is true for using the expression itab1 =\ncorresponding #( itab2 )? Note: There are 2 correct answers to this question.",
+      "A": "A. Fields with the same name and the same type will be copied from itab2 to itab 1.",
+      "B": "B. itab1 and itab2 must have at least one field name in common.",
+      "C": "C. itab1 and itab2 must have the same data type.",
+      "D": "D. Fields with the same name but with different types may be copied from itab2 to itab1.",
+      "CorrectOption(s)": ["A", "B"]
+  },
+  {
+      "QuestionID": 73,
+      "QuestionText": "What would be the correct expression to change a given string value 'mr joe doe' into 'JOE' in an\nABAP SQL field list?\n\nA. SELECT FROM TABLE dbtab1\nFIELDS\nf1,\nsubstring(upper('mjore doe'), 4, 3) AS f2_sub_up,\nf3,...\n\nB. SELECT FROM TABLE dbtabl\nFIELDS\nf1,\nupper(left('mr joe doe', 6)) AS f2_up_left,\nf3,\n\nC. SELECT FROM TABLE dbtab1\nFIELDS\nf1,\nsubstring(lower(upper( 'mr joe doe') ), 4, 3) AS f2__sub_lo_up,\nf3,\n\nD. SELECT FROM TABLE dbtabl\nFIELDS\nf1,\nleft(lower(substring( 'mr joe doe', 4,3)), 3) AS f2_left_lo_sub,\nf3,",
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D",
+      "CorrectOption(s)": "C"
+  },
+  {
+      "QuestionID": 74,
+      "QuestionText": "For the assignment,\ngv_target=gv_source.\nwhich of the following data declarations will always work without truncation or rounding? Note:\nThere are 2 correct answers to this question.\n\nA. DATA gv_source TYPE p LENGTH 8 DECIMALS 3.\nto\nDATA gv_target TYPE p LENGTH 16 DECIMALS 2.\n\nB. DATA gv_source TYPE d.\nto\nDATA gv_target TYPE string.\n\nC. DATA gv_source TYPE c.\nto\nDATA gv_target TYPE string.\n\nD. DATA gv_source TYPE string.\nto\nDATA gv_target TYPE c.",
+      "A": "A",
+      "B": "B",
+      "C": "C",
+      "D": "D",
+      "CorrectOption(s)": ["A", "C"]
+  },
+  {
+      "QuestionID": 75,
+      "QuestionText": "Given the following Core Data Service View Entity Data Definition,\n1 @AccessControl.authorizationCheck: #NOT REQUIRED\n2 DEFINE VIEW ENTITY demo_flight info_union AS\n3 SELECT FROM Scustom.\n{\n5 KEY id,\n6 KEY ‘Customer AS partner,\n7 name,\n8 city,\n9 country\n10 }\n1 UNION\n12 SELECT FROM stravelag\n13 {\n1 KEY agencynum As id,\n15 ‘Agency 'As partner,\n16 name,\n18  city,\n19 country,\n20 }\nwhen you attempt to activate the definition, what will be the response?",
+      "A": "A. Activation error because the field names of the union do not match",
+      "B": "B. Activation successful",
+      "C": "C. Activation error because the field types of the union do not match",
+      "D": "D. Activation error because the key fields of the union do not match",
+      "CorrectOption(s)": "D"
+  },
+  {
+      "QuestionID": 76,
+      "QuestionText": "Given the following Core Data Service View Entity Data Definition:\n1 @AccessControl.authorizationCheck: #NOT REQUIRED\n2 DEFINE VIEW ENTITY demo_sales_cds_so_ui_ve\n3 AS SELECT FROM demo_sales_cds_so_ve AS SalesOrder\n4 ASSOCIATION TO PARENT demo_sales_cds_so_ve AS SalesOrder\n5 ON Sprojection.parent_key = SalesOrder.so_key\n6 COMPOSITION [0..*] TO demo_sales_cds_material_ve AS ScheduleLine\n7 ON Sprojection.material = ScheduleLine.material\n8 ASSOCIATION [0..1] TO demo_sales_cds_material_ve AS Material\n9 ON Sprojection.material = Material.material\n10 {\n11 KEY so_item_key,\n12 parent_key,\n13 posnr,\n14 SalesOrder,\n15 ScheduleLine,\n16 Material as mat\n17 }\n18\nUsing ABAP SQL, which select statement selects the mat field on line #17?",
+      "A": "A. SELECT mat FROM demo_sales_so_i...",
+      "B": "B. SELECT mat FROM demo_sales_cds_material_ve...",
+      "C": "C. SELECT mat FROM demo_sales_cds_so_i_ve...",
+      "D": "D. SELECT mat FROM Material...",
+      "CorrectOption(s)": "C"
+  },
+  {
+      "QuestionID": 77,
+      "QuestionText": "Which of the following is a generic internal table type?",
+      "A": "A. SORTED TABLE",
+      "B": "B. HASHED TABLE",
+      "C": "C. INDEXTABLE",
+      "D": "D. STANDARD TABLE",
+      "CorrectOption(s)": "D" 
+  },
+  {
+      "QuestionID": 78,
+      "QuestionText": "/DMO/I_Connection is a CDS viéw.\nWhat variable type is connection full based on the following code?\nDATA connection full TYPE//DMD/I_Connection.",
+      "A": "A. Simple variable",
+      "B": "B. Internal table",
+      "C": "C. Structure",
+      "D": "D. Reference variable",
+      "CorrectOption(s)": "C"
+  },
+  {
+      "QuestionID": 79,
+      "QuestionText": "In the following ABAP SQL code, what are valid case distinctions? Note: There are 2 correct answers\nto this question.\n\nA. SELECT FROM dbtab1\nFIELDS F1,\nCASE\nWHEN F2 =\"1' THEN 'Value 1\nWHEN f2'2' THEN 'Value 2' ELSE \"Value for the rest’\nEND AS f case\nINTO TABLE @et_t1.\n\nB. SELECT FROM dbtab1\nFIELDS F1,\nCASE\nWHEN F2=\"1\" THEN \"Value 1'\nWHEN f2 < f3 AND f2 = ‘2’ THEN \"Value2'\nWHEN OTHERS 'Value for the rest\"\nENDCASE AS f_case\nINTO TABLE @gt_t1.\n\nC. SELECTFROM dbtab1\nFIELDS f1,\nCASE f2\nWHEN ‘1\" THEN 'Value;1*\nWHEN '2' THEN ‘Value 2'\nELSE \"Value for the'rest'\nEND ASf_case\nINTO TABLE @gt_t1.\n\nD. SELECT FROM dbtabl\nFIELDS F1,\nCASE f2,\nWHEN ‘1’ THEN 'Value 1',\nWHEN 2’ THEN 'Value 2',\nWHEN OTHERS \"Value for the rest\",\nENDCASE AS f_case\nINTO TABLE @gt_t1.",
+      "A": "AB",
+      "B": "BC",
+      "C": "CD",
+      "D": "AC",
+      "CorrectOption(s)": "A"
+  }
 ]
